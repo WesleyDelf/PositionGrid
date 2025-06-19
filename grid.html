@@ -1,0 +1,76 @@
+<!-- Wesley ALves Ferreira - Kaio Benevits-->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <style>
+        *{
+            margin:0%;
+            padding: 0%;
+        }
+        body{
+            font-size: 20px;
+        }
+        .grid-container{
+         gap: 3px;
+         display: grid;
+        grid-template-columns:3fr 1fr; 
+          grid-template-rows: 5fr 6fr 110fr 3fr;
+         grid-template-areas:
+         "header header"
+         "menu menu"
+         "conteudo aside"
+         "footer footer";
+
+
+        }
+        header, main, section, aside, footer{
+            background-color: #c4c4c4;
+        }
+       
+        header{ grid-area: header; }
+        main { grid-area: menu; }
+        section { grid-area: conteudo; }
+        aside { grid-area: aside; }
+        footer { grid-area: footer; }
+
+        @media (max-width: 580px) {
+            aside{
+                display: none;
+            }
+       .grid-container{
+         gap: 3px;
+         display: grid;          
+         grid-template-areas:
+         "header header"
+         "menu menu"
+         "conteudo conteudo"
+         "footer footer";
+        }
+        body{
+            font-size: 25px;
+        }
+
+    }
+       
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+
+    <header>Cabeçalho</header>
+
+    <main>Menu</main>
+
+    <section>Conteúdo</section>
+
+    <aside>Aside</aside>
+
+    <footer>Rodapé</footer>
+
+ </div>
+
+</body>
+</html>
